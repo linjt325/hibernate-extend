@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-9-18 20:20:13 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.lin.hibernate_mapping.pojoBoth.Order" table="ORDERS">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="OrderNumber" type="java.lang.String">
+            <column name="ORDERNUMBER" />
+        </property>
+        <many-to-one name="customer" class="com.lin.hibernate_mapping.pojoBoth.Customer" >
+            <column name="CUSTOMER" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
