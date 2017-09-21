@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2017-9-19 15:53:46 by Hibernate Tools 3.4.0.CR1 -->
-<hibernate-mapping package="com.lin.hibernate_mapping.pojoOne2One">
+<hibernate-mapping package="com.lin.hibernate_mapping.pojoOne2One.foreign">
     <class name="Department" table="DEPARTMENT">
         <id name="id" type="java.lang.Integer">
             <column name="ID" />
@@ -11,6 +11,8 @@
         <property name="departName" type="java.lang.String">
             <column name="DEPARTNAME" />
         </property>
-        <one-to-one name="manager" class="Manager" cascade="save-update"></one-to-one>
+        <many-to-one name="manager" class="Manager"   >
+        	<column name="MANAGER_ID" unique="true" ></column>
+        </many-to-one>
     </class>
 </hibernate-mapping>

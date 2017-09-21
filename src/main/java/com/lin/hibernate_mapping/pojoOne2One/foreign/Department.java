@@ -1,9 +1,11 @@
-package com.lin.hibernate_mapping.pojoOne2One;
+package com.lin.hibernate_mapping.pojoOne2One.foreign;
 
 public class Department {
 	
 	private Integer id;
 	
+
+
 	private String departName;
 	
 	private Manager manager;
