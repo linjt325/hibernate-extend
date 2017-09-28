@@ -15,8 +15,8 @@
   <!--   格式化SQL语句 -->
   <property name="hibernate.format_sql">true</property>
   <!--   生成数据表的策略 -->
-  <property name="hibernate.hbm2ddl.auto">create</property>
-<!--   <property name="hibernate.hbm2ddl.auto">update</property> -->
+<!--   <property name="hibernate.hbm2ddl.auto">create</property> -->
+  <property name="hibernate.hbm2ddl.auto">update</property>
   <property name="hibernate.current_session_context_class">thread</property>
   
   <property name="hibernate.connection.provider_class">org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider</property>
@@ -35,15 +35,8 @@
 <property name="hibernate.c3p0.idle_test_period">1000</property>
 <property name="hibernate.c3p0.max_statements">1000</property>
   <!--   需要关联的数据库对象映射文件 -->
-<!--   <mapping resource="com/lin/pojo/News.hbm.xml"/> -->
-<!--   <mapping resource="com/lin/pojo/Worker.hbm.xml"/> -->
-<!--   <mapping resource="com/lin/hibernate_mapping/pojo/Customer.hbm.xml"/> -->
-<!--   <mapping resource="com/lin/hibernate_mapping/pojo/Order.hbm.xml"/> -->
-<!--   <mapping resource="com/lin/hibernate_mapping/pojoOne2One/foreign/Department.hbm.xml"/> -->
-<!--   <mapping resource="com/lin/hibernate_mapping/pojoOne2One/foreign/Manager.hbm.xml"/> -->
-<!--   <mapping resource="com/lin/hibernate_mapping/pojoOne2One/primary/Department.hbm.xml"/> -->
-<!--   <mapping resource="com/lin/hibernate_mapping/pojoOne2One/primary/Manager.hbm.xml"/> -->
-  <mapping resource="com/lin/hibernate_mapping/pojoMany2Many/single/Catagory.hbm.xml"/>
-  <mapping resource="com/lin/hibernate_mapping/pojoMany2Many/single/Item.hbm.xml"/>
+<!-- <mapping resource="com/lin/hibernate_extend/pojo/subclass/Person.hbm.xml"/> -->
+<!-- <mapping resource="com/lin/hibernate_extend/pojo/joinedSubclass/Person.hbm.xml"/> -->
+<mapping resource="com/lin/hibernate_extend/pojo/unionSubclass/Person.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>

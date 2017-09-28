@@ -1,4 +1,4 @@
-package com.lin.hibernate_mapping.base;
+package com.lin.hibernate_extend.base;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
